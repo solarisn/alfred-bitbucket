@@ -32,21 +32,21 @@ When installing `alfred-bitbucket`, an `alfred-bitbucket/info.plist` file is cre
     - `appPasword`: The App password you generated boce
     - `repoMaxAge`: Number of minutes list of repositories should be cached, defaults to 480
     - `userMaxAge`: Number of minutes user information should be cached, defaults to 720
-    - `teamMaxAge`: Number of minutes list of teams should be cached, defaults to 720
+    - `workspaceMaxAge`: Number of minutes list of workspaces should be cached, defaults to 720
 6. Save
 
 ## Usage
 
 ### `bit` command
-Open Alfred and type `bit`. Select a team. Now you can :
+Open Alfred and type `bit`. Select a workspace. Now you can :
 - Open bookmarked repositories.
-- Enter to see the Team's projects.
-- Cmd+Enter to open the Team's web page.
-- Shift+Enter to mark a team/user as default.
+- Enter to see the Workspace's projects.
+- Cmd+Enter to open the Workspace's web page.
+- Shift+Enter to mark a workspace/user as default.
 
 ### `repo` command
 
-If you set a default team with Shift+Enter on any team/user, this user will be loaded by default. If you select a team using the `bit` command it'll be loaded instead. Then, you'll be able to do the following :
+If you set a default workspace with Shift+Enter on any workspace/user, this user will be loaded by default. If you select a workspace using the `bit` command it'll be loaded instead. Then, you'll be able to do the following :
 - Enter to see repo's PRs, Issues and Forks.
 - Cmd+Enter to open the Repo's page.
 - Shift+Enter to bookmark or remove a bookmarked repository.

@@ -1,7 +1,7 @@
 {
     "name": "alfred-bitbucket",
     "version": "1.5.1",
-    "description": "Workflow to get through your and your teams public / private repositories using App passwords",
+    "description": "Workflow to get through your and your workspace's public / private repositories using App passwords",
     "keywords": [
         "alfred",
         "bitbucket",

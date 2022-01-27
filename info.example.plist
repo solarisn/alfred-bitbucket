@@ -318,7 +318,7 @@
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Open team/user page</string>
+				<string>Open workspace/user page</string>
 				<key>vitoclose</key>
 				<true/>
 			</dict>
@@ -328,7 +328,7 @@
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string>Save team/user as default</string>
+				<string>Save workspace/user as default</string>
 				<key>vitoclose</key>
 				<true/>
 			</dict>
@@ -439,7 +439,7 @@
 	<key>createdby</key>
 	<string>Nicolas Boisvert</string>
 	<key>description</key>
-	<string>Workflow to get through your and your teams public / private repositories using OAuth2</string>
+	<string>Workflow to get through your and your workspace's public / private repositories using OAuth2</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -491,13 +491,13 @@
 				<key>runningsubtext</key>
 				<string>Searching for {query}</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node teams.js "$1"</string>
+				<string>./node_modules/.bin/run-node workspaces.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Show team/user repositories</string>
+				<string>Show workspace/user repositories</string>
 				<key>title</key>
 				<string>Repository lookup</string>
 				<key>type</key>
@@ -663,7 +663,7 @@
 				<string></string>
 				<key>variables</key>
 				<dict>
-					<key>team</key>
+					<key>workspace</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
@@ -1240,7 +1240,7 @@
 		<key>4F0CEB7F-54A6-40A3-952B-0D46650466A6</key>
 		<dict>
 			<key>note</key>
-			<string>Team selected</string>
+			<string>Workspace selected</string>
 			<key>xpos</key>
 			<integer>720</integer>
 			<key>ypos</key>
@@ -1366,7 +1366,7 @@
 		<key>DCC2EA7D-8EA3-449D-8425-8F7CB0CC4F13</key>
 		<dict>
 			<key>note</key>
-			<string>Team selection</string>
+			<string>Workspace selection</string>
 			<key>xpos</key>
 			<integer>90</integer>
 			<key>ypos</key>
@@ -1389,7 +1389,7 @@
 		<key>EF3DEBD1-6337-4368-9B89-091A204B2406</key>
 		<dict>
 			<key>note</key>
-			<string>Open team page on cmd+enter</string>
+			<string>Open workspace page on cmd+enter</string>
 			<key>xpos</key>
 			<integer>880</integer>
 			<key>ypos</key>
@@ -1405,7 +1405,7 @@
 		<key>F433418C-885E-4464-ADF4-BC54BD88160F</key>
 		<dict>
 			<key>note</key>
-			<string>Team selection</string>
+			<string>Workspace selection</string>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
@@ -1420,7 +1420,7 @@
 		<string></string>
 		<key>appPassword</key>
 		<string></string>
-		<key>teamMaxAge</key>
+		<key>workspaceMaxAge</key>
 		<string></string>
 		<key>userMaxAge</key>
 		<string></string>

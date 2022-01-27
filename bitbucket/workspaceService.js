@@ -1,7 +1,7 @@
 const { compareDate, createService } = require('../utils');
 const isDefault = require('../config').isDefault;
 
-const url = (host) => host + 'teams/';
+const url = (host) => host + 'user/permissions/workspaces/';
 
 const map = ({ type, display_name, username }) => {
     const getIcon = () => {

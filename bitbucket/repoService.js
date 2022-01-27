@@ -1,15 +1,15 @@
 const { compareDate, createService } = require('../utils');
 const { getDefaultUsername, isBookmarked } = require('../config');
 
-process.env.team = process.env.team || getDefaultUsername();
-const team = process.env.team;
+process.env.workspace = process.env.workspace || getDefaultUsername();
+const workspace = process.env.workspace;
 
 const url = (host) => {
-    return host + 'repositories/' + team;
+    return host + 'repositories/' + workspace;
 };
 
 const map = ({ has_issues, name, full_name, slug }) => {
-    const arg = [team, slug].join('/');
+    const arg = [workspace, slug].join('/');
     const getTitle = () => [
         ((has_issues) ? '❗' : ''),
         ((isBookmarked(arg)) ? '🌟' : ''),
@@ -22,7 +22,7 @@ const map = ({ has_issues, name, full_name, slug }) => {
     };
 };
 
-const isRepoBookmarked = repo => isBookmarked([team, repo.slug].join('/'));
+const isRepoBookmarked = repo => isBookmarked([workspace, repo.slug].join('/'));
 
 const sort = (first, second) => {
     if (isRepoBookmarked(first) && !isRepoBookmarked(second)) {

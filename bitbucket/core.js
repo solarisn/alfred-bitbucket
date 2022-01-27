@@ -1,7 +1,7 @@
 const alfy = require('alfy');
 const fetchOptions = require('../utils').fetchOptions;
 const bitbucketUrl = 'https://api.bitbucket.org/2.0/';
-const teamService = require('./teamService');
+const workspaceService = require('./workspaceService');
 const userService = require('./userService');
 const repoService = require('./repoService');
 const prService = require('./prService');
@@ -19,7 +19,7 @@ module.exports = {
     bitbucket(token) {
         return {
             repoService: repoService(token, fetch),
-            teamService: teamService(token, fetch),
+            workspaceService: workspaceService(token, fetch),
             userService: userService(token, fetch),
             prService: prService(token, fetch),
             issueService: issueService(token, fetch),
