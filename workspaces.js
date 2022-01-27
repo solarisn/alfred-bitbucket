@@ -9,10 +9,12 @@ const workspaceMaxAge = process.env.workspaceMaxAge || TWELVE_HOURS_MINUTES;
 
 authenticate().then(({ workspaceService, userService }) => {
     userService.load({ maxAge: userMaxAge }).then((result) => {
-        let users = [result];
+        let users = [result].filter(user => user.slug);
         workspaceService.load({ maxAge: workspaceMaxAge }).then(({ values }) => {
-            users = workspaces.concat(workspaceService.output(users.concat(values)));
-            alfy.output(alfy.inputMatches(users, 'title'));
+            const tmp = workspaceService.output(users.concat(values));
+            users = workspaces.concat(tmp);
+            const matches = alfy.inputMatches(users, 'title');
+            alfy.output(matches);
         });
     });
 });

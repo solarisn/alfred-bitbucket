@@ -1,9 +1,9 @@
 const { compareDate, createService } = require('../utils');
 const isDefault = require('../config').isDefault;
 
-const url = (host) => host + 'user/permissions/workspaces/';
+const url = host => `${host}workspaces/`;
 
-const map = ({ type, display_name, username }) => {
+const map = ({ type, name, slug }) => {
     const getIcon = () => {
         switch (type) {
             case 'user':
@@ -14,13 +14,13 @@ const map = ({ type, display_name, username }) => {
     };
     const getTitle = () => [
         getIcon(),
-        (isDefault(username)) ? '🌟' : '',
-        display_name
+        (isDefault(slug)) ? '🌟' : '',
+        name
     ].filter(emoji => !!emoji).join('');
     return {
         title: getTitle(),
-        subtitle: username,
-        arg: username
+        subtitle: slug,
+        arg: slug
     };
 };
 
